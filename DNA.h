@@ -18,7 +18,7 @@ private:
 
 public:
 	DNA();
-	DNA(char*seq,DNA_type atype,int length);
+	DNA(char *aseq,DNA_type atype,int length);
 	DNA(DNA &rhs);
 	void print();
 	RNA convert_to_RNA();
@@ -27,7 +27,11 @@ public:
 	void set_startchar(int y);
 	int get_endchar();
 	int get_startchar();
-
+	DNA operator+(DNA &obj);
+	bool operator==(DNA &obj);
+	bool operator!=(DNA &obj);
+	friend ostream& operator<< (ostream&,	DNA&);
+	friend istream& operator>> (istream&, DNA&);
 
 	~DNA();
 };
