@@ -41,11 +41,17 @@ Codon CodonsTable::getAminoAcid(char * value)
 			break;
 			index = i;
 		}
+		else
+			count_ = 0;
 
 	}
 	return codons[index];
 }
 void CodonsTable::setCodon(char * value, char AminoAcid, int index)
 {
-
+	codons[index].AminoAcid = AminoAcid;
+	for (int i = 0; i < 3; i++)
+	{
+		codons[index].value[i] = value[i];
+	}
 }
