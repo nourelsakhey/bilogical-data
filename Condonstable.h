@@ -2,26 +2,30 @@
 #include<iostream>
 #include<string>
 #include<fstream>
+#include<exception>
+#include<cstring>
 using namespace std;
+
 class Protein;
 
-struct condon
+struct codon
 {
 	char value[4]; // {a,b,c,'\0'}
 	char aminoacid;
 
 
 };
-class Condonstable
+
+class Codonstable
 {
 private:
-	condon condons[64];
+	codon codons[64];
 	ifstream file;
 public:
-	Condonstable();
-	void load_condons_from_file(string condons_file_name);
-	condon get_aminoacid(char*value);
-	void set_condon(char*value, char aminoacid, int index);
-	~Condonstable();
+	Codonstable();
+	void load_codons_from_file(string codons_file_name);
+	codon get_aminoacid(char*value);
+	void set_codon(char*value, char aminoacid, int index);
+	~Codonstable();
 };
 
