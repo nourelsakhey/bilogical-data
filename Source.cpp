@@ -87,7 +87,7 @@ int main() {
 			}
 			//cout << "enter the type of DNA" << endl;
 			Protein p1(ARR, enzyme, x);
-			cout << p1;
+			p1.print();
 			cout << "what operation you want to do" << endl << "1-print the strand    2-convert to RNA" << endl;
 			int y;
 			cin >> y;
