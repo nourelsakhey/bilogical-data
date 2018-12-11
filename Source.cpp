@@ -4,8 +4,6 @@
 #include"Protein.h"
 #include"Condonstable.h"
 #include"RNA.h"
-
-
 using namespace std;
 
 int main() {
