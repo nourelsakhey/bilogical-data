@@ -1,25 +1,33 @@
 #include "sequence.h"
+#include <iostream>
+#include <string>
+#include <cstring>
 
+using namespace std;
 
-
-sequence::sequence()
-{
-}
-sequence::sequence(int alength)
-{
-	length = alength;
-	seq = new char[alength];
-}
-sequence::sequence(sequence & rhs)
-{
-	rhs.seq = new char;
-	rhs.seq = seq;
-}
-char* Align(sequence *s1, sequence *s2)
+Sequence::Sequence()
 {
 
 }
 
-sequence::~sequence()
+Sequence::~Sequence()
 {
+
 }
+
+Sequence::Sequence(int length)
+{
+
+}
+
+Sequence::Sequence(Sequence& rhs)
+{
+    seq = rhs.seq;
+}
+
+void Sequence::Print()
+{
+
+}
+
+
